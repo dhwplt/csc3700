@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booth Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="dashboard-header">
-        <h1>Self-Study Booth Dashboard</h1>
-        <button id="refreshBtn">🔄 Refresh</button>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1><i class="fas fa-chalkboard"></i> Self-Study Booth Dashboard</h1>
+                <p class="last-update">Last refreshed: <span id="lastRefreshTime">Never</span></p>
+            </div>
+            <div class="header-actions">
+                <button id="refreshBtn" class="btn refresh-btn">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+                <div class="status-legend">
+                    <div class="legend-item"><span class="legend-available"></span> Available</div>
+                    <div class="legend-item"><span class="legend-occupied"></span> Occupied</div>
+                    <div class="legend-item"><span class="legend-maintenance"></span> Maintenance</div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="boothContainer" class="booth-grid"></div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-value" id="availableCount">0</div>
+                    <div class="stat-label">Available</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="occupiedCount">0</div>
+                    <div class="stat-label">Occupied</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="maintenanceCount">0</div>
+                    <div class="stat-label">Maintenance</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Self-Study Booths | Data updates every 10 seconds</p>
+        </footer>
     </div>
-    <div id="boothContainer" class="booth-grid"></div>
 
     <script src="dashboard.js"></script>
 </body>
-
 </html>
