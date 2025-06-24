@@ -1,4 +1,4 @@
-const sheetURL = "https://script.google.com/macros/s/AKfycby4yNUo1_x9VJRKitMLz9oCI5_VAgFG8H324o2y4YuSQ82IVHkmXY-E1FETZyAht-dZGQ/exec";
+const sheetURL = "https://script.google.com/macros/s/AKfycbwDKpE7c1fNNKedMF05Q6uGnW9cTKIQ-AgyGkLwUIjI7LV3fXOsrQBIvPokzkX-vI3-YA/exec";
 const booths = ["A1", "A2", "A3", "A4", "A5", "A6"];
 
 // Cache DOM elements
